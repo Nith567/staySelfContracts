@@ -122,7 +122,6 @@ contract HotelBooking is SelfVerificationRoot, Ownable {
             require(keccak256(bytes(gender)) == keccak256(bytes("F")), "Bed reserved for girls only");
             require(paymentToken.transferFrom(msg.sender, address(this), girlsBedPrice), "Payment failed");
         }
-
         // Book the bed
         bookedBeds[bedNumber] = true;
         userToBed[msg.sender] = bedNumber;

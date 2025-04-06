@@ -25,16 +25,20 @@ async function main() {
   const identityVerificationHub = "0x3e2487a250e2A7b56c7ef5307Fb591Cc8C83623D";
 
   // Generate scope from endpoint
-  const scope = hashEndpointWithScope("https://b955-2a09-bac1-7420-38-00-50-18e.ngrok-free.app", 'Self-Hotel-Booking');
+  const scope = hashEndpointWithScope("https://f2a6-2a09-bac5-5907-323-00-50-7f.ngrok-free.app", 'Self-Hotel-Booking');
   console.log("scope: ", scope);
   const attestationId = 1n;
 
   const token = "0x96CFA0E76Bd15d99A1230CA3955be5E677B746a6";
   
+
   const boysBedPrice = 1000000n; 
   const girlsBedPrice = 1200000n;
+  // Bed numbers for boys and girls
   const boysBeds = [1, 3, 5, 7];
   const girlsBeds = [2, 4, 6, 8];
+
+  // Country restrictions (blocking only North Korea and Pakistan)
   const forbiddenCountries = [
     countries.NORTH_KOREA,
     countries.PAKISTAN
